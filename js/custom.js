@@ -149,9 +149,10 @@
       pan: true,
       collapse: true,
       zoom: true,
-      // nodeContent: "title",
-      // verticalDepth: 3, // From the 3th level of orgchart, nodes will be aligned vertically.
-      // depth: 4,
+      nodeContent: "title",
+      verticalDepth: 3, // From the 3th level of orgchart, nodes will be aligned vertically.
+      depth: 4,
+      direction: "b2t",
       createNode: function (node, data) {
         node.find(".content").css({
           "white-space": "normal",
