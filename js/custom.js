@@ -156,7 +156,6 @@
       zoom: true,
       nodeContent: "title",
       depth: 4,
-      direction: "b2t",
       createNode: function (node, data) {
         node.find(".content").css({
           "white-space": "normal",
