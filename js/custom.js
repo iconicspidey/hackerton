@@ -156,7 +156,7 @@
       zoom: true,
       nodeContent: "title",
       depth: 4,
-      // direction: "b2t",
+      direction: "b2t",
       createNode: function (node, data) {
         node.find(".content").css({
           "white-space": "normal",
@@ -167,10 +167,3 @@
     });
   });
 })(jQuery);
-
-// Array.from(document.querySelectorA(".title")).forEach((element) => {
-//   element.style.width = "500px";
-// });
-// document.querySelectorA(".content").forEach((element) => {
-//   element.style.width = "min-content";
-// });
