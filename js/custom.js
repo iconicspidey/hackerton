@@ -71,18 +71,23 @@
                     },
                     {
                       name: "NO",
-                      title: "why?",
-                      children: [
-                        { name: "", title: "Religion" },
-                        { name: "", title: "Social" },
-                        { name: "", title: "Health" },
-                        { name: "", title: "Cultural" },
-                      ],
+                      title: "",
                       children: [
                         {
-                          name: "Other reasons",
+                          name: "why?",
+                          title: "",
                           children: [
-                            { name: "", title: "Gives names" },
+                            { name: "", title: "Religion" },
+                            { name: "", title: "Social" },
+                            { name: "", title: "Health" },
+                            { name: "", title: "Cultural" },
+                          ],
+                        },
+                        {
+                          name: "Other reasons",
+                          title: "",
+                          children: [
+                            { name: "", title: "gives name" },
                             { name: "", title: "or phone number of contacts" },
                           ],
                         },
@@ -150,66 +155,17 @@
       collapse: true,
       zoom: true,
       nodeContent: "title",
-      verticalDepth: 3, // From the 3th level of orgchart, nodes will be aligned vertically.
       depth: 4,
-      direction: "b2t",
+      // direction: "b2t",
       createNode: function (node, data) {
         node.find(".content").css({
           "white-space": "normal",
           height: "auto",
           "font-size": "12px",
         }); // Adjust as needed
-        if (data.relationship && data.relationship === 100) {
-          // Add special styling for nodes with a relationship of 100
-          node.css("border", "2px solid red");
-          node.css("background-color", "lightyellow");
-
-          // Draw arrows from the current node to its children with a relationship of 100
-          node
-            .children(".nodes")
-            .children(".node")
-            .each(function () {
-              var childId = $(this).attr("id");
-
-              // Check if the child node has a relationship of 100
-              var childData = datascource.findNodeById(childId);
-              if (
-                childData &&
-                childData.relationship &&
-                childData.relationship === 100
-              ) {
-                drawArrow(node, this);
-              }
-            });
-        }
       },
     });
   });
-  function drawArrow(sourceNode, destNode) {
-    var sourcePos = sourceNode.position();
-    var destPos = destNode.position();
-
-    var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    var path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-
-    // Calculate the path of the arrow
-    var pathStr =
-      "M " +
-      (sourcePos.left + sourceNode.width()) +
-      " " +
-      (sourcePos.top + sourceNode.height() / 2);
-    pathStr +=
-      " L " + destPos.left + " " + (destPos.top + destNode.height() / 2);
-
-    path.setAttribute("d", pathStr);
-    path.setAttribute("stroke", "blue"); // Adjust arrow color
-    path.setAttribute("stroke-width", "2");
-
-    svg.appendChild(path);
-
-    // Append the arrow to the body
-    document.body.appendChild(svg);
-  }
 })(jQuery);
 
 // Array.from(document.querySelectorA(".title")).forEach((element) => {
