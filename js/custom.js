@@ -81,14 +81,17 @@
                             { name: "", title: "Social" },
                             { name: "", title: "Health" },
                             { name: "", title: "Cultural" },
-                          ],
-                        },
-                        {
-                          name: "Other reasons",
-                          title: "",
-                          children: [
-                            { name: "", title: "gives name" },
-                            { name: "", title: "or phone number of contacts" },
+                            {
+                              name: "Other reasons",
+                              title: "",
+                              children: [
+                                {
+                                  name: "",
+                                  title:
+                                    "suggest name and phone number of thos who might benefit",
+                                },
+                              ],
+                            },
                           ],
                         },
                       ],
