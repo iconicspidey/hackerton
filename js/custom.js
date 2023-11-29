@@ -168,4 +168,7 @@
       },
     });
   });
+  $(document).ready(function () {
+    $("#org-chart-container").draggable();
+  });
 })(jQuery);
