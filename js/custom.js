@@ -155,8 +155,10 @@
       collapse: true,
       zoom: true,
       nodeContent: "title",
-      verticalDepth: 3, // From the 3th level of orgchart, nodes will be aligned vertically.
-      depth: 4,
+      verticalDepth: 2, // From the 3th level of orgchart, nodes will be aligned vertically.
+      depth: 2,
+      exportButton: true,
+      exportFilename: "MyOrgChart",
       createNode: function (node, data) {
         node.find(".content").css({
           "white-space": "normal",
@@ -167,10 +169,3 @@
     });
   });
 })(jQuery);
-
-// Array.from(document.querySelectorA(".title")).forEach((element) => {
-//   element.style.width = "500px";
-// });
-// document.querySelectorA(".content").forEach((element) => {
-//   element.style.width = "min-content";
-// });
