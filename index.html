@@ -222,7 +222,7 @@ http://www.tooplate.com/view/2098-health
                                    </div>
                                    <div class="col-md-6">
                                         <div class="form-group row">
-                                             <label class="col-sm-3 col-form-label">Tobacco intack</label>
+                                             <label class="col-sm-3 col-form-label">Tobacco intake</label>
                                              <div class="col-sm-9">
                                                   <input type="text" class="form-control">
                                              </div>
@@ -264,65 +264,12 @@ http://www.tooplate.com/view/2098-health
           </div>
      </div>
 
-     <!-- <div class="container">
-          <h3 class="text-align-center page-header">MODEERN CONTRACEPTIVE METHODS</h3>
-          <div class="row">
-               <div class="col-xs-12">
-                    <p class="lead text-center bg-info btn text-info center-block">Knowledge</p>
-                    <div class="row">
-                         <div class="col-xs-6 text-center">
-                              <p class="btn"><span class="fa fa-arrow-down"></span>
-                         </div>
-                         <div class="col-xs-6 text-center">
-                              <p class="btn">
-                                   <span class=""></span>
-                              </p>
-                         </div>
-                    </div>
-               </div>
-          </div>
-          <div class="row">
-               <div class="col-xs-6 text-center">
-                    <p class="center-block"><span class="btn btn-success btn-lg">Yes</span></p>
-                    <p class="btn center-block"><span class="glyphicon glyphicon-arrow-down"></span></p>
-                    <p class="bg-success text-success btn">Okay! Proceed to step 2.</p>
-               </div>
-               <div class="col-xs-6 text-center">
-                    <p class="center-block"><span class="btn btn-danger btn-lg">No</span></p>
-                    <p class="btn center-block"><span class="glyphicon glyphicon-arrow-down"></span></p>
-                    <p class="bg-info text-info btn">Are you willing to put the data into the system?</p>
-                    <div class="row">
-                         <div class="col-xs-6 text-center">
-                              <p class="btn"><span class="glyphicon glyphicon-arrow-down"></span>
-                         </div>
-                         <div class="col-xs-6 text-center">
-                              <p class="btn">
-                                   <span class="glyphicon glyphicon-arrow-down"></span>
-                              </p>
-                         </div>
-                    </div>
-                    <div class="row">
-                         <div class="col-xs-6">
-                              <p class="center-block"><span class="btn btn-success btn-lg">Yes</span></p>
-                              <p class="btn">
-                                   <span class="glyphicon glyphicon-arrow-down"></span>
-                              </p>
-                              <p class="bg-success text-success btn text-wrap">Okay! After the data is in the system,
-                                   proceed
-                                   to step 2.</p>
-                         </div>
-                         <div class="col-xs-6 text-center">
-                              <p class="center-block"><span class="btn btn-danger btn-lg">No</span></p>
-                              <p class="btn center-block"><span class="glyphicon glyphicon-arrow-down"></span></p>
-                              <p class="btn bg-danger text-danger text-wrap">The data must be in the system to use this
-                                   service.</p>
-                         </div>
-                    </div>
-               </div>
-          </div>
-     </div> -->
+
      <div class="container">
           <h2 class="text-align-center">MODERN CONTRACEPTIVE METHODS</h2>
+          <h6 class="text-info text-center">please view chart on desktop or tablet</h6>
+     </div>
+     <div id="chart-container">
      </div>
 
      <style>
@@ -333,22 +280,14 @@ http://www.tooplate.com/view/2098-health
                scroll-behavior: auto;
           }
 
-          .chart {
-               position: relative;
-               padding-bottom: 20px;
-               height: 100vh;
-          }
-
           .oc-export-btn {
-               position: absolute;
-               top: 0;
-               left: 60%;
-
+               display: none;
           }
 
           @media (max-width: 768px) {
                #chart-container {
                     height: auto;
+                    /* Allow the height to adjust based on content */
                     width: 100%;
                     margin: 0 auto;
                }
@@ -363,6 +302,7 @@ http://www.tooplate.com/view/2098-health
      <script src="js/wow.min.js"></script>
      <script src="js/smoothscroll.js"></script>
      <script src="js/owl.carousel.min.js"></script>
+     <script src="js/custom.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/orgchart/3.8.1/js/jquery.orgchart.min.js"></script>
 
 
